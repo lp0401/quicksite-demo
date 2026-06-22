@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickSite — 5分钟搭建企业官网</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a5f' },
+            slate: { 850: '#1e293b', 950: '#0f172a' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- 导航 -->
+  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-200 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-primary-700 flex items-center gap-2">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        QuickSite
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#features" class="hover:text-primary-600 transition">功能</a>
+        <a href="#pricing" class="hover:text-primary-600 transition">定价</a>
+        <a href="#about" class="hover:text-primary-600 transition">关于</a>
+        <a href="#contact" class="hover:text-primary-600 transition">联系</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="admin.html" class="text-sm font-medium text-slate-600 hover:text-primary-600 transition">后台管理</a>
+        <a href="#contact" class="px-4 py-2 bg-primary-600 text-white text-sm font-semibold rounded-lg hover:bg-primary-700 transition shadow-sm">立即试用</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-semibold mb-6 border border-primary-100">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-500 animate-pulse"></span>
+        已帮助 2,000+ 企业快速上线
+      </div>
+      <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+        5 分钟搭建<br><span class="text-primary-600">专业企业官网</span>
+      </h1>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+        QuickSite 是一款零代码企业官网构建工具。无需设计、无需开发，自带询盘线索收集与后台管理，让你的业务即刻上线。
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="px-8 py-3.5 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition shadow-lg shadow-primary-500/20">
+          免费开始
+        </a>
+        <a href="#features" class="px-8 py-3.5 bg-white text-slate-700 font-semibold rounded-xl border border-slate-200 hover:border-slate-300 transition">
+          了解更多
+        </a>
+      </div>
+      
+      <!-- 预览图 -->
+      <div class="mt-16 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-50 to-transparent z-10 h-20 bottom-0"></div>
+        <div class="rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-200/50 overflow-hidden">
+          <div class="h-8 bg-slate-100 border-b border-slate-200 flex items-center px-4 gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+            <div class="ml-4 flex-1 h-5 bg-white rounded-md border border-slate-200 text-xs text-slate-400 flex items-center px-2">yourcompany.com</div>
+          </div>
+          <div class="p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="h-4 w-24 bg-primary-100 rounded mb-4"></div>
+              <div class="h-8 w-3/4 bg-slate-800 rounded mb-3"></div>
+              <div class="h-4 w-full bg-slate-200 rounded mb-2"></div>
+              <div class="h-4 w-5/6 bg-slate-200 rounded mb-6"></div>
+              <div class="h-10 w-32 bg-primary-600 rounded-lg"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="h-32 bg-slate-100 rounded-xl"></div>
+              <div class="h-32 bg-slate-100 rounded-xl"></div>
+              <div class="h-32 bg-slate-100 rounded-xl"></div>
+              <div class="h-32 bg-slate-100 rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能 -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">一站式企业官网解决方案</h2>
+        <p class="text-slate-500 max-w-xl mx-auto">从展示到获客，从管理到分析，QuickSite 覆盖企业官网的完整生命周期。</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.43 1.12 2.25 2.25 0 01-1.12-2.43 3 3 0 001.128-5.78 2.25 2.25 0 011.12-2.43 2.25 2.25 0 012.43 1.12 3 3 0 005.78-1.128 2.25 2.25 0 012.43-1.12 2.25 2.25 0 011.12 2.43 3 3 0 00-1.128 5.78 2.25 2.25 0 01-1.12 2.43 2.25 2.25 0 01-2.43-1.12zM15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">零代码搭建</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">无需任何编程基础，选择模板、填写内容，5 分钟即可发布专业官网。</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 3.75H3.75a.75.75 0 00-.75.75v15a.75.75 0 00.75.75h16.5a.75.75 0 00.75-.75v-15a.75.75 0 00-.75-.75zM9.75 9.75h4.5m-4.5 3h4.5m-8.25-6h12"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">智能线索收集</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">内置询盘表单，访客提交后自动进入 CRM，支持状态跟踪与导出。</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">数据看板</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">实时统计访问量、线索数、转化率，用数据驱动业务增长。</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">移动端适配</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">所有页面自动响应式适配，在手机、平板、电脑上都有完美体验。</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-pink-50 text-pink-600 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">SEO 优化</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">自动生成 Sitemap、优化 Meta 标签，让搜索引擎更快收录你的站点。</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-100 bg-slate-50/50 hover:shadow-lg hover:shadow-slate-200/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-slate-900 mb-2">自定义域名</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">支持绑定自有域名，一键 HTTPS，打造专业品牌形象。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 定价 -->
+  <section id="pricing" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">简单透明的定价</h2>
+        <p class="text-slate-500">选择适合你业务规模的方案，随时升级或降级。</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white">
+          <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">免费版</h3>
+          <div class="text-3xl font-bold text-slate-900 mb-1">¥0<span class="text-base font-normal text-slate-400">/月</span></div>
+          <p class="text-sm text-slate-500 mb-6">适合个人体验</p>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>1 个页面</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>基础表单</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>QuickSite 品牌</li>
+          </ul>
+          <button class="w-full py-2.5 border border-slate-200 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">开始使用</button>
+        </div>
+        <div class="p-6 rounded-2xl border-2 border-primary-500 bg-white relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-primary-600 text-white text-xs font-semibold rounded-full">最受欢迎</div>
+          <h3 class="text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2">专业版</h3>
+          <div class="text-3xl font-bold text-slate-900 mb-1">¥99<span class="text-base font-normal text-slate-400">/月</span></div>
+          <p class="text-sm text-slate-500 mb-6">适合中小企业</p>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>无限页面</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>线索 CRM</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>数据看板</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>自定义域名</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>去除品牌</li>
+          </ul>
+          <button class="w-full py-2.5 bg-primary-600 rounded-lg text-sm font-semibold text-white hover:bg-primary-700 transition">立即订阅</button>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white">
+          <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">企业版</h3>
+          <div class="text-3xl font-bold text-slate-900 mb-1">¥399<span class="text-base font-normal text-slate-400">/月</span></div>
+          <p class="text-sm text-slate-500 mb-6">适合大型团队</p>
+          <ul class="space-y-3 text-sm text-slate-600 mb-8">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>多站点管理</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>API 接入</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>SSO 单点登录</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>专属客服</li>
+          </ul>
+          <button class="w-full py-2.5 border border-slate-200 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 transition">联系销售</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">关于 QuickSite</h2>
+          <p class="text-slate-500 leading-relaxed mb-6">
+            QuickSite 诞生于一个简单的观察：大多数中小企业需要一个官网，但搭建过程复杂、成本高昂。我们把这个过程简化到只需要填写内容，剩下的交给 QuickSite。
+          </p>
+          <p class="text-slate-500 leading-relaxed mb-8">
+            从 2024 年上线以来，QuickSite 已帮助超过 2,000 家企业快速建立线上形象，累计收集线索超过 50 万条。
+          </p>
+          <div class="grid grid-cols-3 gap-6">
+            <div>
+              <div class="text-2xl font-bold text-primary-600">2,000+</div>
+              <div class="text-sm text-slate-500">服务企业</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-primary-600">50万+</div>
+              <div class="text-sm text-slate-500">收集线索</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-primary-600">99.9%</div>
+              <div class="text-sm text-slate-500">服务可用</div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-gradient-to-br from-primary-50 to-primary-100 p-8">
+          <div class="space-y-4">
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold">李</div>
+              <div>
+                <div class="font-semibold text-slate-900">李明</div>
+                <div class="text-sm text-slate-500">某科技公司 CEO</div>
+              </div>
+              <div class="ml-auto text-sm text-slate-400">"3 天变 3 分钟，不可思议。"</div>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">王</div>
+              <div>
+                <div class="font-semibold text-slate-900">王芳</div>
+                <div class="text-sm text-slate-500">设计工作室创始人</div>
+              </div>
+              <div class="ml-auto text-sm text-slate-400">"客户线索管理太好用了。"</div>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center text-violet-600 font-bold">张</div>
+              <div>
+                <div class="font-semibold text-slate-900">张伟</div>
+                <div class="text-sm text-slate-500">制造业销售总监</div>
+              </div>
+              <div class="ml-auto text-sm text-slate-400">"转化率提升了 40%。"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系/表单 -->
+  <section id="contact" class="py-20 bg-slate-950 text-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">开始你的 QuickSite 之旅</h2>
+          <p class="text-slate-400 mb-8 leading-relaxed">
+            填写下方表单，我们的顾问会在 24 小时内与你联系，为你演示产品并协助开通账号。
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-slate-300">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+              hello@quicksite.com
+            </div>
+            <div class="flex items-center gap-3 text-slate-300">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.369-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+              400-888-9999
+            </div>
+            <div class="flex items-center gap-3 text-slate-300">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+              上海市浦东新区陆家嘴环路 1000 号
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+          <form id="leadForm" class="space-y-5">
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-1.5">姓名 *</label>
+              <input type="text" name="name" required class="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition" placeholder="请输入您的姓名">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-1.5">手机号 *</label>
+              <input type="tel" name="phone" required class="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition" placeholder="请输入手机号">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-1.5">邮箱</label>
+              <input type="email" name="email" class="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition" placeholder="请输入邮箱（选填）">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-300 mb-1.5">需求描述</label>
+              <textarea name="message" rows="3" class="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition resize-none" placeholder="简单描述您的需求..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition flex items-center justify-center gap-2">
+              <span>提交咨询</span>
+              <svg id="submitIcon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </button>
+          </form>
+          <div id="formSuccess" class="hidden mt-4 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm text-center">
+            ✅ 提交成功！我们会尽快与您联系。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-slate-950 border-t border-white/5 text-center text-sm text-slate-500">
+    <p>© 2024 QuickSite. All rights reserved. | <a href="admin.html" class="text-slate-400 hover:text-white transition">管理后台</a></p>
+  </footer>
+
+  <script>
+    // 线索表单提交
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const lead = {
+        id: Date.now(),
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        email: formData.get('email') || '',
+        message: formData.get('message') || '',
+        status: 'new',
+        source: '官网表单',
+        createdAt: new Date().toISOString()
+      };
+      
+      const leads = JSON.parse(localStorage.getItem('quicksite_leads') || '[]');
+      leads.unshift(lead);
+      localStorage.setItem('quicksite_leads', JSON.stringify(leads));
+      
+      document.getElementById('formSuccess').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(() => document.getElementById('formSuccess').classList.add('hidden'), 5000);
+    });
+  </script>
+</body>
+</html>
